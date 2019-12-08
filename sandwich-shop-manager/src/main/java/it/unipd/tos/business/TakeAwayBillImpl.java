@@ -18,7 +18,7 @@ public class TakeAwayBillImpl implements TakeAwayBill{
                 double total = 0;
                 double totalPaniniFritti = 0;
                 int panini = 0;
-                double minPanino = itemsOrdered.get(0).getPrice();
+                double minPanino = Integer.MAX_VALUE;
                 for(MenuItem item : itemsOrdered) {
                         total = total += item.getPrice();
                         if(item.getType() == MenuItem.itemType.PANINI || 
